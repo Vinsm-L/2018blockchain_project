@@ -9,6 +9,7 @@
 智能合约实现的功能面向商家方和消费者方。本商品保修系统服务于顾客和商家，其主要功能是，顾客上传保修信息、查询保修信息、申请保修、查询保修申请的状态，商家受理保修申请、完成保修申请。
 
 进入保修系统后界面如下图，上半部分是顾客服务界面，下半部分是商家服务界面，分别对应上述功能。
+
 ![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/home.PNG)
 
 下面是对本保修系统的功能介绍。
@@ -17,13 +18,16 @@
 由于不同商家的要求可能不一样，以下约定，“保修信息”指申请保修时所需的保修卡号和产品ID。
 
 顾客在收货后，可以把商品的保修信息上传到系统。第一个输入栏填入的是产品ID，第二个输入栏填入保修卡号。点击upload，即可完成保修信息的上传。
+
 ![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/uploadItemInfo.PNG)
 
 ### 查询保修信息
 当顾客需要申请保修时，可以在系统上查询商品的保修信息。由于一个顾客可能有多件商品，所以需要使用序号进行区分。如下图，在输入栏中填入商品序号。
+
 ![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/searchItemInfo1.PNG)
 
 点击search按钮后，显示商品保修信息如下。
+
 ![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/searchItemInfo2.PNG)
 
 ### 申请保修
