@@ -1,0 +1,17 @@
+.content {
+    margin: 100px auto;
+    max-width: 650px;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.5) 0 2px 8px;
+    padding: 30px;
+}
+
+#big {
+	background: #96a9c1;
+    width: 100px;
+	color: white;
+}
+
+#small { 
+	margin-left: 12px;
+}

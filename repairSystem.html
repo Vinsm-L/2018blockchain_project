@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<title>Blockchain Repair System</title>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<link rel="stylesheet" href="repairSystem.css">
+<script src="logic.js"></script>
+</head>
+
+<body>
+<div class="content">
+
+<h2 style="text-align: center">Customer Service</h2>
+
+<br><br>
+
+<label>Upload item infomation : </label><input id="_itemID"> <input id="_warrantyCardID"><button onclick="uploadItemInfo()" id="small">upload</button>
+
+<br><br>
+
+<label>Search item infomation : </label><input id="index"> <button onclick="searchItemInfo()" id="small">search</button>
+<h4>Your item infomation : <strong id="returnItemInfo"></strong></h4>
+
+<br><br>
+
+<label>Apply for repair : </label><input id="itemID"> <input id="warrantyCardID"> <input id="tel"> <input id="customerAddr"> <input id="date"> <button onclick="applyForRepair()" id="small">apply</button>
+
+<br><br>
+
+<button onclick="searchRequestStatus()" id="big">Search request status</button>
+<h4>Your request status : <strong id="returnRequestStatus"></strong></h4>
+
+<br><br><br><br><HR>
+
+<h2 style="text-align: center">Merchant Service</h2>
+
+<br><br>
+
+<button onclick="acceptRequest()" id="big">Accept request</button>
+
+<br><br>
+
+<button onclick="completeRequest()" id="big">Complete request</button>
+
+</div>
+
+</body>
+</html>
