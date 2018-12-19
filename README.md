@@ -62,3 +62,106 @@
 
 账户1拥有1个商品，商品序列号和保修卡号均为1。账户2拥有2个商品，其中一个商品序列号和保修卡号均为2，另一个商品序列号和保修卡号均为3。账户3无商品。
 
+由商家账户部署智能合约，所以变量 merchant 的值为商家账户地址。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/1.png)
+
+测试 uploadItemInfo 函数。账户 1 上传其商品信息成功，如下。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/2.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/3.png)
+
+同理，账户 2 也上传其两件商品的信息。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/4.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/5.png)
+
+可通过调用查询商品函数进一步验证上传函数的正确性。下面测试searchItemInfo 函数。账户 1 查询其第 1 件商品， index 为 0，返回信息正确。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/6.png)
+
+当传入 index 的值为 1 时，由于其超出了账户 1 拥有的商品数量，所以显示错误信息，如下。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/7.png)
+
+账户 2 查询其第一、二件商品的信息，返回结果正确。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/8.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/9.png)
+
+下面测试 applyForRepair 函数。账户 1、 2 填入申请信息分别如下。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/10.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/11.png)
+
+通过查看 uploaded 数组的内容，可验证函数被正确执行。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/12.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/13.png)
+
+此时账户 1、 2 调用 searchRequestStatus 函数，返回结果为其申请已上传。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/14.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/15.png)
+
+现在测试 acceptRequest 函数。如果由非商家账户调用该函数，将会报错。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/16.png)
+
+由商家进行调用后，结果如下。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/17.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/18.png)
+
+此时 uploaded 数组已空，而两个申请转移至 accepted 数组。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/19.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/20.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/21.png)
+
+此时账户 1、 2 查询申请状态，得到结果是已受理。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/22.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/23.png)
+
+现在测试 completeRequest 函数。同理，非 merchant 账户调用该函数会报错。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/24.png)
+
+由商家调用该函数，结果如下。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/25.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/26.png)
+
+当已经不存在已受理的申请，会报错。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/27.png)
+
+完成操作后可看到 accepted 数组已空，申请被转移到 completed 数组中。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/28.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/29.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/30.png)
+
+此时账户 1、 2 再查询申请状态，得到结果为申请已完成。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/31.png)
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/32.png)
+
+由于账户 3 无商品信息、未上传保修申请，所以其调用 searchRequestStatus 函数时返回结果为无相关信息。
+
+![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/33.png)
