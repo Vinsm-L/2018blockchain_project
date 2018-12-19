@@ -58,3 +58,7 @@
 
 ![](https://github.com/Vinsm-L/2018blockchain_project/blob/master/pics/searchRequestStatus3.PNG)
 ## 测试
+为了更直观地看到函数调用的结果，使用remix进行测试。在测试中，规定商家账户为**0xca35b7d915458ef540ade6068dfe2f44e8fa733c**，账户1为**0x14723a09acff6d2a60dcdf7aa4aff308fddc160c**，账户2为**0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db**，账户3为**0x583031d1113ad414f02576bd6afabfb302140225**。
+
+账户1拥有1个商品，商品序列号和保修卡号均为1。账户2拥有2个商品，其中一个商品序列号和保修卡号均为2，另一个商品序列号和保修卡号均为3。账户3无商品。
+
